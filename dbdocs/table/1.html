@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>M_ショート</title>
+		<title>S_閲覧</title>
 		<link rel="stylesheet" type="text/css" href="../stylesheet.css" title="Style">
 	</head>
 <script>
 function asd() {
-	parent.document.title="M_ショート";
+	parent.document.title="S_閲覧";
 }
 </script>
 
@@ -62,13 +62,13 @@ function asd() {
 
 		<hr>
 		<a name="main"></a>
-		<h2>テーブル   M_ショート</h2>
+		<h2>テーブル   S_閲覧</h2>
 		<hr>
 
 
 <dl>
 	<dt><b>物理名:</b></dt>
-		<dd>m_short<br><br></dd>
+		<dd>s_browsing<br><br></dd>
 </dl>
 
 <dl>
@@ -103,52 +103,43 @@ function asd() {
 	<tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#17">ID</a>&nbsp;</td>
+	<td><a href="#20">ID</a>&nbsp;</td>
 	<td>id&nbsp;</td>
 	<td>smallint&nbsp;</td>
 	<td align="center">&nbsp;</td>
 	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
+	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center">&nbsp;</td>
+	<td><a href="#21">トピックタイプ</a>&nbsp;</td>
+	<td>topic_type&nbsp;</td>
+	<td>tinyint&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#18">題名</a>&nbsp;</td>
-	<td>title_name&nbsp;</td>
-	<td>varchar(50)&nbsp;</td>
+	<td align="center">NOT NULL&nbsp;</td>
+</tr>
+<tr>
+	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#22">ページNo</a>&nbsp;</td>
+	<td>page_no&nbsp;</td>
+	<td>int&nbsp;</td>
 	<td align="center">&nbsp;</td>
 	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#19">画像名</a>&nbsp;</td>
-	<td>image_name&nbsp;</td>
-	<td>varchar(30)&nbsp;</td>
+	<td><a href="#23">閲覧数</a>&nbsp;</td>
+	<td>browsing_count&nbsp;</td>
+	<td>int&nbsp;</td>
 	<td align="center">&nbsp;</td>
 	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#20">文章</a>&nbsp;</td>
-	<td>sentense&nbsp;</td>
-	<td>text&nbsp;</td>
-	<td align="center">&nbsp;</td>
-	<td align="center">NOT NULL&nbsp;</td>
-</tr>
-<tr>
-	<td align="center">&nbsp;</td>
-	<td align="center">&nbsp;</td>
-	<td><a href="#21">著者</a>&nbsp;</td>
-	<td>author&nbsp;</td>
-	<td>varchar(20)&nbsp;</td>
-	<td align="center">&nbsp;</td>
-	<td align="center">NOT NULL&nbsp;</td>
-</tr>
-<tr>
-	<td align="center">&nbsp;</td>
-	<td align="center">&nbsp;</td>
-	<td><a href="#15">登録日時</a>&nbsp;</td>
+	<td><a href="#18">登録日時</a>&nbsp;</td>
 	<td>in_date&nbsp;</td>
 	<td>datetime&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -157,7 +148,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#16">更新日時</a>&nbsp;</td>
+	<td><a href="#19">更新日時</a>&nbsp;</td>
 	<td>up_date&nbsp;</td>
 	<td>datetime&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -261,7 +252,7 @@ function asd() {
 	</tr>
 </table>
 
-<a name="17"></a>
+<a name="20"></a>
 <h3><img src="../image/icons/pkey.gif">  ID</h3>
 
 <dl>
@@ -282,81 +273,22 @@ function asd() {
 <p>
 
 <hr>
-<a name="18"></a>
-<h3>  題名</h3>
-
-<dl>
-	<dd>title_name
-	<p>
-	<dd><pre></pre>
-	<p>
-	<dl>
-		<dt><b>UNIQUE : </b>FALSE<br></dt>
-		<dt><b>NOT NULL : </b>TRUE<br></dt>
-		<dt><b>型 : </b>varchar(50)<br></dt>
-		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
-		<dt><b>デフォルト値 : </b><br></dt>
-		<dt><b>制約 : </b><br></dt>
-	</dl>
-</dl>
-
-<p>
-
-<hr>
-<a name="19"></a>
-<h3>  画像名</h3>
-
-<dl>
-	<dd>image_name
-	<p>
-	<dd><pre></pre>
-	<p>
-	<dl>
-		<dt><b>UNIQUE : </b>FALSE<br></dt>
-		<dt><b>NOT NULL : </b>TRUE<br></dt>
-		<dt><b>型 : </b>varchar(30)<br></dt>
-		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
-		<dt><b>デフォルト値 : </b><br></dt>
-		<dt><b>制約 : </b><br></dt>
-	</dl>
-</dl>
-
-<p>
-
-<hr>
-<a name="20"></a>
-<h3>  文章</h3>
-
-<dl>
-	<dd>sentense
-	<p>
-	<dd><pre></pre>
-	<p>
-	<dl>
-		<dt><b>UNIQUE : </b>FALSE<br></dt>
-		<dt><b>NOT NULL : </b>TRUE<br></dt>
-		<dt><b>型 : </b>text<br></dt>
-		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
-		<dt><b>デフォルト値 : </b><br></dt>
-		<dt><b>制約 : </b><br></dt>
-	</dl>
-</dl>
-
-<p>
-
-<hr>
 <a name="21"></a>
-<h3>  著者</h3>
+<h3><img src="../image/icons/pkey.gif">  トピックタイプ</h3>
 
 <dl>
-	<dd>author
+	<dd>topic_type
 	<p>
-	<dd><pre></pre>
+	<dd><pre>1 : ショートショート
+2 : 創作料理
+3 : 文具紹介
+4 : マッチングアプリ冒険譚
+5 : ゲーム紹介</pre>
 	<p>
 	<dl>
 		<dt><b>UNIQUE : </b>FALSE<br></dt>
 		<dt><b>NOT NULL : </b>TRUE<br></dt>
-		<dt><b>型 : </b>varchar(20)<br></dt>
+		<dt><b>型 : </b>tinyint<br></dt>
 		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
 		<dt><b>デフォルト値 : </b><br></dt>
 		<dt><b>制約 : </b><br></dt>
@@ -366,7 +298,49 @@ function asd() {
 <p>
 
 <hr>
-<a name="15"></a>
+<a name="22"></a>
+<h3><img src="../image/icons/pkey.gif">  ページNo</h3>
+
+<dl>
+	<dd>page_no
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
+		<dt><b>型 : </b>int<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="23"></a>
+<h3>  閲覧数</h3>
+
+<dl>
+	<dd>browsing_count
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
+		<dt><b>型 : </b>int<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="18"></a>
 <h3>  登録日時</h3>
 
 <dl>
@@ -387,7 +361,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="16"></a>
+<a name="19"></a>
 <h3>  更新日時</h3>
 
 <dl>
