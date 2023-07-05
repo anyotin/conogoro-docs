@@ -2,6 +2,7 @@ SET SESSION FOREIGN_KEY_CHECKS=0;
 
 /* Drop Tables */
 
+DROP TABLE IF EXISTS m_profile;
 DROP TABLE IF EXISTS m_short;
 DROP TABLE IF EXISTS s_browsing;
 
@@ -9,6 +10,17 @@ DROP TABLE IF EXISTS s_browsing;
 
 
 /* Create Tables */
+
+CREATE TABLE m_profile
+(
+	id smallint NOT NULL,
+	name varchar(20) NOT NULL,
+	sentense text NOT NULL,
+	in_date datetime NOT NULL,
+	up_date datetime NOT NULL,
+	PRIMARY KEY (id)
+);
+
 
 CREATE TABLE m_short
 (

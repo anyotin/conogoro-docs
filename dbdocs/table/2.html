@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>日時</title>
+		<title>S_閲覧</title>
 		<link rel="stylesheet" type="text/css" href="../stylesheet.css" title="Style">
 	</head>
 <script>
 function asd() {
-	parent.document.title="日時";
+	parent.document.title="S_閲覧";
 }
 </script>
 
@@ -26,7 +26,7 @@ function asd() {
 								<a href="package-summary.html">オブジェクトタイプ</a>&nbsp;
 							</td>
 							<td class="NavBarCell1Rev"> &nbsp;
-								グループ&nbsp;
+								テーブル&nbsp;
 							</td>
 							<td class="NavBarCell1">
 								<a href="../help-doc.html">ヘルプ</a>&nbsp;
@@ -37,8 +37,8 @@ function asd() {
 			</tr>
 			<tr>
 				<td class="NavBarCell2">
-					&nbsp;<b>前のグループ</b>&nbsp;&nbsp;
-					&nbsp;<b>次のグループ</b>&nbsp;&nbsp;
+					&nbsp;<a HREF="1.html" ><b>前のテーブル</b></a>&nbsp;&nbsp;
+					&nbsp;<b>次のテーブル</b>&nbsp;&nbsp;
 				</td>
 				<td class="NavBarCell2">
 					<a href="../index.html" target="_top">フレームあり</a>
@@ -62,12 +62,25 @@ function asd() {
 
 		<hr>
 		<a name="main"></a>
-		<h2>グループ   日時</h2>
+		<h2>テーブル   S_閲覧</h2>
 		<hr>
+
+
+<dl>
+	<dt><b>物理名:</b></dt>
+		<dd>s_browsing<br><br></dd>
+</dl>
+
+<dl>
+	<dt><b>制約:</b></dt>
+		<dd><br><br></dd>
+</dl>
 
 <pre style="font-size:1em;">
 
 </pre>
+
+<p>
 
 <!-- ======== Attribute ======== -->
 
@@ -88,6 +101,42 @@ function asd() {
 	</tr>
 	<tr>
 	<tr>
+	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#25">ID</a>&nbsp;</td>
+	<td>id&nbsp;</td>
+	<td>smallint&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">NOT NULL&nbsp;</td>
+</tr>
+<tr>
+	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#26">トピックタイプ</a>&nbsp;</td>
+	<td>topic_type&nbsp;</td>
+	<td>tinyint&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">NOT NULL&nbsp;</td>
+</tr>
+<tr>
+	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#27">ページNo</a>&nbsp;</td>
+	<td>page_no&nbsp;</td>
+	<td>int&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">NOT NULL&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#28">閲覧数</a>&nbsp;</td>
+	<td>browsing_count&nbsp;</td>
+	<td>int&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">NOT NULL&nbsp;</td>
+</tr>
+<tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
 	<td><a href="#18">登録日時</a>&nbsp;</td>
@@ -109,31 +158,90 @@ function asd() {
 	</tr>
 </table>
 
-<P>
+<p>
 
-<!-- ========== REFERENCT TABLE =========== -->
+<!-- ========== FOREIGN KEY =========== -->
 
-<a name="reference table"></a>
+<a name="foreign_key"><!-- --></a>
 <table border="1" cellpadding="3" cellspacing="0" width="100%" class="AttributeTable">
 	<tr class="TableHeadingColor">
-		<th colspan="2">使用テーブル</th>
+		<th colspan="7">外部キー</th>
 	</tr>
-<tr class="TableRowColor">
-	<td width="10%">
-		<a href="../table/0.html">m_short&nbsp;</a>&nbsp;
-	</td>
-	<td>M_ショート&nbsp;</td>
-</tr>
-<tr class="TableRowColor">
-	<td width="10%">
-		<a href="../table/1.html">s_browsing&nbsp;</a>&nbsp;
-	</td>
-	<td>S_閲覧&nbsp;</td>
-</tr>
-
+	<tr class="TableSubHeadingColor">
+		<th width="12">属性</th>
+		<th width="28%">参照テーブル</th>
+		<th width="12%">参照キー</th>
+		<th width="12%">ON UPDATE</th>
+		<th width="12%">ON DELETE</th>
+		<th width="12%">親の多重度</th>
+		<th width="12%">子の多重度</th>
+	</tr>
+	
 </table>
 
-<P>
+<p>
+
+<!-- ========== REFERENCE KEY =========== -->
+
+<a name="reference_key"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%" class="AttributeTable">
+	<tr class="TableHeadingColor">
+		<th colspan="7">参照キー</th>
+	</tr>
+	<tr class="TableSubHeadingColor">
+		<th width="12">属性</th>
+		<th width="28%">テーブル</th>
+		<th width="12%">外部キー</th>
+		<th width="12%">ON UPDATE</th>
+		<th width="12%">ON DELETE</th>
+		<th width="12%">親の多重度</th>
+		<th width="12%">子の多重度</th>
+	</tr>
+	
+</table>
+
+<p>
+
+<!-- ========== Complex Unique Key =========== -->
+
+<a name="complex_unique_key"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%" class="AttributeTable">
+	<tr class="TableHeadingColor">
+		<th colspan="1">複合一意キー</th>
+	</tr>
+	<tr class="TableSubHeadingColor">
+		<th>&nbsp;</th>
+		
+	</tr>
+	
+</table>
+
+
+
+<p>
+
+<!-- ========== INDEX SUMMARY =========== -->
+
+<a name="index_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%" class="AttributeTable">
+	<tr class="TableHeadingColor">
+		<th colspan="3">インデックス の概要</th>
+	</tr>
+	<tr class="TableSubHeadingColor">
+		<th>インデックス名</th>
+		<th>タイプ</th>
+		<th>UNIQUE</th>
+	</tr>
+	
+</table>
+
+<p>
+
+
+
+
+
+<p>
 
 <!-- ============ ATTRIBUTE DETAIL =========== -->
 
@@ -144,6 +252,94 @@ function asd() {
 	</tr>
 </table>
 
+<a name="25"></a>
+<h3><img src="../image/icons/pkey.gif">  ID</h3>
+
+<dl>
+	<dd>id
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
+		<dt><b>型 : </b>smallint<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="26"></a>
+<h3><img src="../image/icons/pkey.gif">  トピックタイプ</h3>
+
+<dl>
+	<dd>topic_type
+	<p>
+	<dd><pre>1 : ショートショート
+2 : 創作料理
+3 : 文具紹介
+4 : マッチングアプリ冒険譚
+5 : ゲーム紹介</pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
+		<dt><b>型 : </b>tinyint<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="27"></a>
+<h3><img src="../image/icons/pkey.gif">  ページNo</h3>
+
+<dl>
+	<dd>page_no
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
+		<dt><b>型 : </b>int<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="28"></a>
+<h3>  閲覧数</h3>
+
+<dl>
+	<dd>browsing_count
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
+		<dt><b>型 : </b>int<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
 <a name="18"></a>
 <h3>  登録日時</h3>
 
@@ -190,7 +386,6 @@ function asd() {
 
 
 
-
 		<!-- ========== START OF NAVBAR ========== -->
 		<table border="0" width="100%" cellpadding="1" cellspacing="0">
 			<tr>
@@ -204,7 +399,7 @@ function asd() {
 								<a href="package-summary.html">オブジェクトタイプ</a>&nbsp;
 							</td>
 							<td class="NavBarCell1Rev"> &nbsp;
-								グループ&nbsp;
+								テーブル&nbsp;
 							</td>
 							<td class="NavBarCell1">
 								<a href="../help-doc.html">ヘルプ</a>&nbsp;
@@ -215,8 +410,8 @@ function asd() {
 			</tr>
 			<tr>
 				<td class="NavBarCell2">
-					&nbsp;<b>前のグループ</b>&nbsp;&nbsp;
-					&nbsp;<b>次のグループ</b>&nbsp;&nbsp;
+					&nbsp;<a HREF="1.html" ><b>前のテーブル</b></a>&nbsp;&nbsp;
+					&nbsp;<b>次のテーブル</b>&nbsp;&nbsp;
 				</td>
 				<td class="NavBarCell2">
 					<a href="../index.html" target="_top">フレームあり</a>

@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>S_閲覧</title>
+		<title>M_ショート</title>
 		<link rel="stylesheet" type="text/css" href="../stylesheet.css" title="Style">
 	</head>
 <script>
 function asd() {
-	parent.document.title="S_閲覧";
+	parent.document.title="M_ショート";
 }
 </script>
 
@@ -38,7 +38,7 @@ function asd() {
 			<tr>
 				<td class="NavBarCell2">
 					&nbsp;<a HREF="0.html" ><b>前のテーブル</b></a>&nbsp;&nbsp;
-					&nbsp;<b>次のテーブル</b>&nbsp;&nbsp;
+					&nbsp;<a HREF="2.html" ><b>次のテーブル</b></a>&nbsp;&nbsp;
 				</td>
 				<td class="NavBarCell2">
 					<a href="../index.html" target="_top">フレームあり</a>
@@ -62,13 +62,13 @@ function asd() {
 
 		<hr>
 		<a name="main"></a>
-		<h2>テーブル   S_閲覧</h2>
+		<h2>テーブル   M_ショート</h2>
 		<hr>
 
 
 <dl>
 	<dt><b>物理名:</b></dt>
-		<dd>s_browsing<br><br></dd>
+		<dd>m_short<br><br></dd>
 </dl>
 
 <dl>
@@ -110,29 +110,38 @@ function asd() {
 	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
-	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#21">トピックタイプ</a>&nbsp;</td>
-	<td>topic_type&nbsp;</td>
-	<td>tinyint&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td align="center">NOT NULL&nbsp;</td>
-</tr>
-<tr>
-	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
-	<td align="center">&nbsp;</td>
-	<td><a href="#22">ページNo</a>&nbsp;</td>
-	<td>page_no&nbsp;</td>
-	<td>int&nbsp;</td>
+	<td><a href="#21">題名</a>&nbsp;</td>
+	<td>title_name&nbsp;</td>
+	<td>varchar(50)&nbsp;</td>
 	<td align="center">&nbsp;</td>
 	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#23">閲覧数</a>&nbsp;</td>
-	<td>browsing_count&nbsp;</td>
-	<td>int&nbsp;</td>
+	<td><a href="#22">画像名</a>&nbsp;</td>
+	<td>image_name&nbsp;</td>
+	<td>varchar(30)&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">NOT NULL&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#23">文章</a>&nbsp;</td>
+	<td>sentense&nbsp;</td>
+	<td>text&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">NOT NULL&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#24">著者</a>&nbsp;</td>
+	<td>author&nbsp;</td>
+	<td>varchar(20)&nbsp;</td>
 	<td align="center">&nbsp;</td>
 	<td align="center">NOT NULL&nbsp;</td>
 </tr>
@@ -274,21 +283,17 @@ function asd() {
 
 <hr>
 <a name="21"></a>
-<h3><img src="../image/icons/pkey.gif">  トピックタイプ</h3>
+<h3>  題名</h3>
 
 <dl>
-	<dd>topic_type
+	<dd>title_name
 	<p>
-	<dd><pre>1 : ショートショート
-2 : 創作料理
-3 : 文具紹介
-4 : マッチングアプリ冒険譚
-5 : ゲーム紹介</pre>
+	<dd><pre></pre>
 	<p>
 	<dl>
 		<dt><b>UNIQUE : </b>FALSE<br></dt>
 		<dt><b>NOT NULL : </b>TRUE<br></dt>
-		<dt><b>型 : </b>tinyint<br></dt>
+		<dt><b>型 : </b>varchar(50)<br></dt>
 		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
 		<dt><b>デフォルト値 : </b><br></dt>
 		<dt><b>制約 : </b><br></dt>
@@ -299,17 +304,17 @@ function asd() {
 
 <hr>
 <a name="22"></a>
-<h3><img src="../image/icons/pkey.gif">  ページNo</h3>
+<h3>  画像名</h3>
 
 <dl>
-	<dd>page_no
+	<dd>image_name
 	<p>
 	<dd><pre></pre>
 	<p>
 	<dl>
 		<dt><b>UNIQUE : </b>FALSE<br></dt>
 		<dt><b>NOT NULL : </b>TRUE<br></dt>
-		<dt><b>型 : </b>int<br></dt>
+		<dt><b>型 : </b>varchar(30)<br></dt>
 		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
 		<dt><b>デフォルト値 : </b><br></dt>
 		<dt><b>制約 : </b><br></dt>
@@ -320,17 +325,38 @@ function asd() {
 
 <hr>
 <a name="23"></a>
-<h3>  閲覧数</h3>
+<h3>  文章</h3>
 
 <dl>
-	<dd>browsing_count
+	<dd>sentense
 	<p>
 	<dd><pre></pre>
 	<p>
 	<dl>
 		<dt><b>UNIQUE : </b>FALSE<br></dt>
 		<dt><b>NOT NULL : </b>TRUE<br></dt>
-		<dt><b>型 : </b>int<br></dt>
+		<dt><b>型 : </b>text<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="24"></a>
+<h3>  著者</h3>
+
+<dl>
+	<dd>author
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
+		<dt><b>型 : </b>varchar(20)<br></dt>
 		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
 		<dt><b>デフォルト値 : </b><br></dt>
 		<dt><b>制約 : </b><br></dt>
@@ -411,7 +437,7 @@ function asd() {
 			<tr>
 				<td class="NavBarCell2">
 					&nbsp;<a HREF="0.html" ><b>前のテーブル</b></a>&nbsp;&nbsp;
-					&nbsp;<b>次のテーブル</b>&nbsp;&nbsp;
+					&nbsp;<a HREF="2.html" ><b>次のテーブル</b></a>&nbsp;&nbsp;
 				</td>
 				<td class="NavBarCell2">
 					<a href="../index.html" target="_top">フレームあり</a>
