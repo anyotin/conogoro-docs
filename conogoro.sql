@@ -3,7 +3,7 @@ SET SESSION FOREIGN_KEY_CHECKS=0;
 /* Drop Tables */
 
 DROP TABLE IF EXISTS m_profile;
-DROP TABLE IF EXISTS m_short;
+DROP TABLE IF EXISTS m_shortshort;
 DROP TABLE IF EXISTS s_browsing;
 
 
@@ -22,7 +22,7 @@ CREATE TABLE m_profile
 );
 
 
-CREATE TABLE m_short
+CREATE TABLE m_shortshort
 (
 	id smallint NOT NULL,
 	title_name varchar(50) NOT NULL,
