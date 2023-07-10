@@ -26,7 +26,7 @@ CREATE TABLE m_shortshort
 (
 	id smallint NOT NULL,
 	title_name varchar(50) NOT NULL,
-	image_name varchar(30) NOT NULL,
+	image_url tinytext NOT NULL,
 	sentense text NOT NULL,
 	author varchar(20) NOT NULL,
 	in_date datetime NOT NULL,
