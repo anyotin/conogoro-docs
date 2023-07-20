@@ -5,6 +5,7 @@ SET SESSION FOREIGN_KEY_CHECKS=0;
 DROP TABLE IF EXISTS m_failed_dish;
 DROP TABLE IF EXISTS m_profile;
 DROP TABLE IF EXISTS m_shortshort;
+DROP TABLE IF EXISTS m_user;
 DROP TABLE IF EXISTS s_browsing;
 
 
@@ -46,6 +47,18 @@ CREATE TABLE m_shortshort
 	in_date datetime NOT NULL,
 	up_date datetime NOT NULL,
 	PRIMARY KEY (id)
+);
+
+
+CREATE TABLE m_user
+(
+	user_id smallint NOT NULL,
+	user_name tinytext NOT NULL,
+	email tinytext NOT NULL,
+	password varchar(30) NOT NULL,
+	in_date datetime NOT NULL,
+	up_date datetime NOT NULL,
+	PRIMARY KEY (user_id)
 );
 
 
