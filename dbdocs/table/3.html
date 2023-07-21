@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>M_ユーザー</title>
+		<title>M_文房具</title>
 		<link rel="stylesheet" type="text/css" href="../stylesheet.css" title="Style">
 	</head>
 <script>
 function asd() {
-	parent.document.title="M_ユーザー";
+	parent.document.title="M_文房具";
 }
 </script>
 
@@ -62,13 +62,13 @@ function asd() {
 
 		<hr>
 		<a name="main"></a>
-		<h2>テーブル   M_ユーザー</h2>
+		<h2>テーブル   M_文房具</h2>
 		<hr>
 
 
 <dl>
 	<dt><b>物理名:</b></dt>
-		<dd>m_user<br><br></dd>
+		<dd>m_stationery<br><br></dd>
 </dl>
 
 <dl>
@@ -103,8 +103,8 @@ function asd() {
 	<tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#36">ユーザーID</a>&nbsp;</td>
-	<td>user_id&nbsp;</td>
+	<td><a href="#37">ID</a>&nbsp;</td>
+	<td>id&nbsp;</td>
 	<td>smallint&nbsp;</td>
 	<td align="center">&nbsp;</td>
 	<td align="center">NOT NULL&nbsp;</td>
@@ -112,8 +112,17 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#37">ユーザー名</a>&nbsp;</td>
-	<td>user_name&nbsp;</td>
+	<td><a href="#38">題名</a>&nbsp;</td>
+	<td>title_name&nbsp;</td>
+	<td>varchar(50)&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">NOT NULL&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#39">画像URL</a>&nbsp;</td>
+	<td>image_url&nbsp;</td>
 	<td>tinytext&nbsp;</td>
 	<td align="center">&nbsp;</td>
 	<td align="center">NOT NULL&nbsp;</td>
@@ -121,25 +130,25 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#38">メールアドレス</a>&nbsp;</td>
-	<td>email&nbsp;</td>
-	<td>tinytext&nbsp;</td>
+	<td><a href="#40">文章</a>&nbsp;</td>
+	<td>sentense&nbsp;</td>
+	<td>text&nbsp;</td>
 	<td align="center">&nbsp;</td>
 	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#39">パスワード</a>&nbsp;</td>
-	<td>password&nbsp;</td>
-	<td>varchar(30)&nbsp;</td>
+	<td><a href="#41">著者</a>&nbsp;</td>
+	<td>author&nbsp;</td>
+	<td>varchar(20)&nbsp;</td>
 	<td align="center">&nbsp;</td>
 	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#26">登録日時</a>&nbsp;</td>
+	<td><a href="#27">登録日時</a>&nbsp;</td>
 	<td>in_date&nbsp;</td>
 	<td>datetime&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -148,7 +157,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#27">更新日時</a>&nbsp;</td>
+	<td><a href="#28">更新日時</a>&nbsp;</td>
 	<td>up_date&nbsp;</td>
 	<td>datetime&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -252,11 +261,11 @@ function asd() {
 	</tr>
 </table>
 
-<a name="36"></a>
-<h3><img src="../image/icons/pkey.gif">  ユーザーID</h3>
+<a name="37"></a>
+<h3><img src="../image/icons/pkey.gif">  ID</h3>
 
 <dl>
-	<dd>user_id
+	<dd>id
 	<p>
 	<dd><pre></pre>
 	<p>
@@ -273,39 +282,18 @@ function asd() {
 <p>
 
 <hr>
-<a name="37"></a>
-<h3>  ユーザー名</h3>
-
-<dl>
-	<dd>user_name
-	<p>
-	<dd><pre></pre>
-	<p>
-	<dl>
-		<dt><b>UNIQUE : </b>FALSE<br></dt>
-		<dt><b>NOT NULL : </b>TRUE<br></dt>
-		<dt><b>型 : </b>tinytext<br></dt>
-		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
-		<dt><b>デフォルト値 : </b><br></dt>
-		<dt><b>制約 : </b><br></dt>
-	</dl>
-</dl>
-
-<p>
-
-<hr>
 <a name="38"></a>
-<h3>  メールアドレス</h3>
+<h3>  題名</h3>
 
 <dl>
-	<dd>email
+	<dd>title_name
 	<p>
 	<dd><pre></pre>
 	<p>
 	<dl>
 		<dt><b>UNIQUE : </b>FALSE<br></dt>
 		<dt><b>NOT NULL : </b>TRUE<br></dt>
-		<dt><b>型 : </b>tinytext<br></dt>
+		<dt><b>型 : </b>varchar(50)<br></dt>
 		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
 		<dt><b>デフォルト値 : </b><br></dt>
 		<dt><b>制約 : </b><br></dt>
@@ -316,17 +304,17 @@ function asd() {
 
 <hr>
 <a name="39"></a>
-<h3>  パスワード</h3>
+<h3>  画像URL</h3>
 
 <dl>
-	<dd>password
+	<dd>image_url
 	<p>
 	<dd><pre></pre>
 	<p>
 	<dl>
 		<dt><b>UNIQUE : </b>FALSE<br></dt>
 		<dt><b>NOT NULL : </b>TRUE<br></dt>
-		<dt><b>型 : </b>varchar(30)<br></dt>
+		<dt><b>型 : </b>tinytext<br></dt>
 		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
 		<dt><b>デフォルト値 : </b><br></dt>
 		<dt><b>制約 : </b><br></dt>
@@ -336,7 +324,49 @@ function asd() {
 <p>
 
 <hr>
-<a name="26"></a>
+<a name="40"></a>
+<h3>  文章</h3>
+
+<dl>
+	<dd>sentense
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
+		<dt><b>型 : </b>text<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="41"></a>
+<h3>  著者</h3>
+
+<dl>
+	<dd>author
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
+		<dt><b>型 : </b>varchar(20)<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="27"></a>
 <h3>  登録日時</h3>
 
 <dl>
@@ -357,7 +387,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="27"></a>
+<a name="28"></a>
 <h3>  更新日時</h3>
 
 <dl>

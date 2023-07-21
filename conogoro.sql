@@ -5,6 +5,7 @@ SET SESSION FOREIGN_KEY_CHECKS=0;
 DROP TABLE IF EXISTS m_failed_dish;
 DROP TABLE IF EXISTS m_profile;
 DROP TABLE IF EXISTS m_shortshort;
+DROP TABLE IF EXISTS m_stationery;
 DROP TABLE IF EXISTS m_user;
 DROP TABLE IF EXISTS s_browsing;
 
@@ -38,6 +39,19 @@ CREATE TABLE m_profile
 
 
 CREATE TABLE m_shortshort
+(
+	id smallint NOT NULL,
+	title_name varchar(50) NOT NULL,
+	image_url tinytext NOT NULL,
+	sentense text NOT NULL,
+	author varchar(20) NOT NULL,
+	in_date datetime NOT NULL,
+	up_date datetime NOT NULL,
+	PRIMARY KEY (id)
+);
+
+
+CREATE TABLE m_stationery
 (
 	id smallint NOT NULL,
 	title_name varchar(50) NOT NULL,
