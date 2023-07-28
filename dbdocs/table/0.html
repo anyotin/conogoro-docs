@@ -103,7 +103,7 @@ function asd() {
 	<tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#22">ID</a>&nbsp;</td>
+	<td><a href="#26">ID</a>&nbsp;</td>
 	<td>id&nbsp;</td>
 	<td>smallint&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -112,7 +112,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#23">題名</a>&nbsp;</td>
+	<td><a href="#27">題名</a>&nbsp;</td>
 	<td>title_name&nbsp;</td>
 	<td>varchar(50)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -121,7 +121,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#24">画像URL</a>&nbsp;</td>
+	<td><a href="#28">画像URL</a>&nbsp;</td>
 	<td>image_url&nbsp;</td>
 	<td>tinytext&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -130,7 +130,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#25">文章</a>&nbsp;</td>
+	<td><a href="#29">文章</a>&nbsp;</td>
 	<td>sentense&nbsp;</td>
 	<td>text&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -139,7 +139,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#26">著者</a>&nbsp;</td>
+	<td><a href="#30">著者</a>&nbsp;</td>
 	<td>author&nbsp;</td>
 	<td>varchar(20)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -148,7 +148,25 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#27">登録日時</a>&nbsp;</td>
+	<td><a href="#31">閲覧数</a>&nbsp;</td>
+	<td>view_count&nbsp;</td>
+	<td>int unsigned&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">NOT NULL&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#32">配信開始日時</a>&nbsp;</td>
+	<td>op_date&nbsp;</td>
+	<td>date&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">NOT NULL&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#33">登録日時</a>&nbsp;</td>
 	<td>in_date&nbsp;</td>
 	<td>datetime&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -157,7 +175,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#28">更新日時</a>&nbsp;</td>
+	<td><a href="#34">更新日時</a>&nbsp;</td>
 	<td>up_date&nbsp;</td>
 	<td>datetime&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -261,7 +279,7 @@ function asd() {
 	</tr>
 </table>
 
-<a name="22"></a>
+<a name="26"></a>
 <h3><img src="../image/icons/pkey.gif">  ID</h3>
 
 <dl>
@@ -282,7 +300,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="23"></a>
+<a name="27"></a>
 <h3>  題名</h3>
 
 <dl>
@@ -303,7 +321,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="24"></a>
+<a name="28"></a>
 <h3>  画像URL</h3>
 
 <dl>
@@ -324,7 +342,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="25"></a>
+<a name="29"></a>
 <h3>  文章</h3>
 
 <dl>
@@ -345,7 +363,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="26"></a>
+<a name="30"></a>
 <h3>  著者</h3>
 
 <dl>
@@ -366,7 +384,49 @@ function asd() {
 <p>
 
 <hr>
-<a name="27"></a>
+<a name="31"></a>
+<h3>  閲覧数</h3>
+
+<dl>
+	<dd>view_count
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
+		<dt><b>型 : </b>int unsigned<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b>0<br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="32"></a>
+<h3>  配信開始日時</h3>
+
+<dl>
+	<dd>op_date
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
+		<dt><b>型 : </b>date<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><現在日時><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="33"></a>
 <h3>  登録日時</h3>
 
 <dl>
@@ -387,7 +447,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="28"></a>
+<a name="34"></a>
 <h3>  更新日時</h3>
 
 <dl>
