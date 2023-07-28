@@ -51,8 +51,6 @@ CREATE TABLE m_profile
 	id smallint NOT NULL,
 	name varchar(20) NOT NULL,
 	sentense text NOT NULL,
-	view_count int unsigned DEFAULT 0 NOT NULL,
-	op_date date DEFAULT NOW(), SYSDATE() NOT NULL,
 	in_date datetime NOT NULL,
 	up_date datetime NOT NULL,
 	PRIMARY KEY (id)
