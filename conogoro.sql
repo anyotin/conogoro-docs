@@ -4,6 +4,7 @@ SET SESSION FOREIGN_KEY_CHECKS=0;
 
 DROP TABLE IF EXISTS m_failed_dish;
 DROP TABLE IF EXISTS m_game;
+DROP TABLE IF EXISTS m_leather_craft;
 DROP TABLE IF EXISTS m_profile;
 DROP TABLE IF EXISTS m_shortshort;
 DROP TABLE IF EXISTS m_stationery;
@@ -36,6 +37,21 @@ CREATE TABLE m_game
 	title_name varchar(50) NOT NULL,
 	image_url tinytext NOT NULL,
 	redirect_url tinytext NOT NULL,
+	sentense text NOT NULL,
+	author varchar(20) NOT NULL,
+	view_count int unsigned DEFAULT 0 NOT NULL,
+	op_date date DEFAULT NOW(), SYSDATE() NOT NULL,
+	in_date datetime NOT NULL,
+	up_date datetime NOT NULL,
+	PRIMARY KEY (id)
+);
+
+
+CREATE TABLE m_leather_craft
+(
+	id smallint NOT NULL,
+	title_name varchar(50) NOT NULL,
+	image_url tinytext NOT NULL,
 	sentense text NOT NULL,
 	author varchar(20) NOT NULL,
 	view_count int unsigned DEFAULT 0 NOT NULL,
